@@ -31,7 +31,7 @@ def colors(value):
 
     return value
 
-def log(value, status='WARNING', color='[Y1]'):
+def log(value, status='WARNING', color='[Y2]'):
     value = colors('{color}[P1]{color}{status}[CC] :: {color}{value}[CC]'.format(
         time=datetime.datetime.now().strftime('%H:%M:%S'),
         value=value,
