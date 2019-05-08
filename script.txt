@@ -1,13 +1,16 @@
-# Script By: Sheptianna H.R
-# XL Iflix
+# Script XL Iflix !
 
-# Untuk mengganti host bisa 
-  menggunakan format dibawah!
 # hostname
 # hostname:80
 # hostname:443
 
-# ALL IP FAST KONEK
-# Gunakan Script Dengan Bijak!
+# XL Iflix
+# Fast Crot
+
+#
+# 
+
+# Gunakan Script Dengan Bijak !
+# Script By: Sheptianna H.R
 
 cdn-gae-ssl-default.akamaized.net:443
