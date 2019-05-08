@@ -31,7 +31,7 @@ def colors(value):
 
     return value
 
-def log(value, status='WARNING', color='[R2]'):
+def log(value, status='WARNING', color='[Y1]'):
     value = colors('{color}[P1]{color}{status}[CC] :: {color}{value}[CC]'.format(
         time=datetime.datetime.now().strftime('%H:%M:%S'),
         value=value,
@@ -40,7 +40,7 @@ def log(value, status='WARNING', color='[R2]'):
     ))
     with lock: print(value)
 
-def log_replace(value, status='Script Siap Digunakan !', color='[R1]'):
+def log_replace(value, status='Script Siap Digunakan !', color='[Y1]'):
     value = colors('{}{} ({})        [CC]\r'.format(color, status, value))
     with lock:
         sys.stdout.write(value)
@@ -81,10 +81,10 @@ class domain_fronting(threading.Thread):
         self.frontend_domains = frontend_domains
         self.socket_tunnel = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.socket_client = socket_client
-        self.buffer_size = 65535
+        self.buffer_size = 1024
         self.daemon = True
 
-    def log(self, value, status='STATUS', color='[P1]'):
+    def log(self, value, status='STATUS', color='[G1]'):
         log(value, status=status, color=color)
 
     def handler(self, socket_tunnel, socket_client, buffer_size):
@@ -128,7 +128,7 @@ class domain_fronting(threading.Thread):
 def main():
     print(colors('\n'.join([
         '[G1]SheptiannaHR',
-        '[Y1]Gunakan Script Dengan Bijak!', '[R1]'
+        '[G1]Gunakan Script Dengan Bijak!', '[R1]'
     ])))
     inject('127.0.0.1', '8080').start()
 
