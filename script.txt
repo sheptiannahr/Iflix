@@ -1,16 +1,13 @@
-# ngapain lu kesini Cuk! 
-#
+# Script By: Sheptianna H.R
+# XL Iflix
+
+# Untuk mengganti host bisa 
+  menggunakan format dibawah!
 # hostname
 # hostname:80
 # hostname:443
 
-#TelkomBangsat
-#
+# ALL IP FAST KONEK
+# Gunakan Script Dengan Bijak!
 
-#118.98.95.106/cgi-bin
-#Ariistwn.pointdns.xyz
-
-# Jangan buat Bokep teros Boejank! 
-#
-
-AriiStwn.pointdns.xyz:443
+cdn-gae-ssl-default.akamaized.net:443

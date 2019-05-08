@@ -40,7 +40,7 @@ def log(value, status='WARNING', color='[R2]'):
     ))
     with lock: print(value)
 
-def log_replace(value, status='Script Siap Digunakan', color='[R1]'):
+def log_replace(value, status='Script Siap Digunakan !', color='[R1]'):
     value = colors('{}{} ({})        [CC]\r'.format(color, status, value))
     with lock:
         sys.stdout.write(value)
@@ -66,13 +66,13 @@ class inject(object):
             if len(frontend_domains) == 0:
                 self.log('script.txt', color='[R1]')
                 return
-            self.log('Script Siap Digunakan'.format(self.inject_host, self.inject_port))
+            self.log('Script Siap Digunakan !'.format(self.inject_host, self.inject_port))
             while True:
                 socket_client, _ = socket_server.accept()
                 socket_client.recv(65535)
                 domain_fronting(socket_client, frontend_domains).start()
         except Exception as exception:
-            self.log('Wah ada yg Eror bosku.. coba jalanin ulang lagi!'.format(self.inject_host, self.inject_port), color='[R1]')
+            self.log('Wah ada yg Eror .. coba jalankan ulang bosqu!'.format(self.inject_host, self.inject_port), color='[R1]')
 
 class domain_fronting(threading.Thread):
     def __init__(self, socket_client, frontend_domains):
@@ -84,7 +84,7 @@ class domain_fronting(threading.Thread):
         self.buffer_size = 65535
         self.daemon = True
 
-    def log(self, value, status='Status', color='[P1]'):
+    def log(self, value, status='STATUS', color='[P1]'):
         log(value, status=status, color=color)
 
     def handler(self, socket_tunnel, socket_client, buffer_size):
