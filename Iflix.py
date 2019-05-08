@@ -66,7 +66,7 @@ class inject(object):
             if len(frontend_domains) == 0:
                 self.log('script.txt', color='[R1]')
                 return
-            self.log('Subscribe dlu cok biar tamvan'.format(self.inject_host, self.inject_port))
+            self.log('Script Already To Used !'.format(self.inject_host, self.inject_port))
             while True:
                 socket_client, _ = socket_server.accept()
                 socket_client.recv(65535)
