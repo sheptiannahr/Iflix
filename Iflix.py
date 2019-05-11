@@ -127,6 +127,7 @@ class domain_fronting(threading.Thread):
 
 def main():
     print(colors('\n'.join([
+        '[R1]# Script Inject XL Iflix',
         '[G1]# Sheptianna HR',
         '[Y1]# Gunakan Script Dengan Bijak !', '[R1]'
     ])))
